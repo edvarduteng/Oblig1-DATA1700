@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kinobilletter</title>
+    <script src="main.js"></script>
+
+</head>
+<body>
+<h1>Bestilling av kinobilletter</h1>
+Velg film her: <select id="filmOption">
+    <option value="-1">Velg film her</option>
+    <option value="harry-potter">Harry Potter</option>
+    <option value="ringenes-herre">Ringenes Herre</option>
+    <option value="gudfaren">Gudfaren</option>
+</select>
+<p id="filmError"></p>
+Antall: <input type="number" id="antall">
+<p id="antallError"></p>
+Fornavn: <input type="text" id="fornavn">
+<p id="fornavnError"></p>
+Etternavn: <input type="text" id="etternavn">
+<p id="etternavnError"></p>
+Telefonnr: <input type="number" id="telefonnr">
+<p id="telefonnrError"></p>
+Epost: <input type="text" id="epost">
+<p id="epostError"></p>
+
+<button onclick="kjop()">Kjøp billett</button>
+<h3>Alle billetter</h3>
+
+
+<button>Slett alle billettene</button>
+</body>
+</html>
