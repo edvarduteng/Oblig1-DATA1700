@@ -83,4 +83,5 @@ function kjop() {
     }
     console.log(billettArray);
 
+
 }
