@@ -8,29 +8,41 @@
 </head>
 <body>
 <h1>Bestilling av kinobilletter</h1>
-Velg film her: <select id="filmOption">
+<label for="filmOption">Velg en film:</label>
+<select id="filmOption">
     <option value="-1">Velg film her</option>
     <option value="harry-potter">Harry Potter</option>
     <option value="ringenes-herre">Ringenes Herre</option>
     <option value="gudfaren">Gudfaren</option>
 </select>
 <p id="filmError"></p>
-Antall: <input type="number" id="antall">
+
+<label for="antall">Antall:</label>
+<input type="number" id="antall">
 <p id="antallError"></p>
-Fornavn: <input type="text" id="fornavn">
+
+<label for="fornavn">Fornavn:</label>
+<input type="text" id="fornavn">
 <p id="fornavnError"></p>
-Etternavn: <input type="text" id="etternavn">
+
+<label for="etternavn">Etternavn:</label>
+<input type="text" id="etternavn">
 <p id="etternavnError"></p>
-Telefonnr: <input type="text" id="telefonnr">
+
+<label for="telefonnr">Telefonnr:</label>
+<input type="text" id="telefonnr">
 <p id="telefonnrError"></p>
-Epost: <input type="text" id="epost">
+
+<label for="epost">Epost:</label>
+<input type="text" id="epost">
 <p id="epostError"></p>
 
 <button onclick="kjop()">Kjøp billett</button>
 <h3>Alle billetter</h3>
 
+<table id="tabell"></table>
 
-<button>Slett alle billettene</button>
+<button onclick="slettArray()">Slett alle billettene</button>
 
 </body>
 </html>
