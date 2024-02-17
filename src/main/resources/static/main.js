@@ -1,3 +1,13 @@
+function validerEpost (epost){
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(epost);
+}
+
+function validerTelefon(telefonnr){
+    const  re = /^[1-9]\d{7}$/;
+    return re.test(telefonnr);
+}
+
 let billettArray=[];
 
 function kjop() {
@@ -42,8 +52,8 @@ function kjop() {
     if (telefonnr === "") {
         document.getElementById("telefonnrError").innerHTML = "Må skrive noe inn i telefonnr";
         validTicket = false;
-    } else if (isNaN(telefonnr) || telefonnr < 10000000 || telefonnr > 99999999) {
-        document.getElementById("telefonnrError").innerHTML = "Må skrive gyldig norsk telefonnr";
+    } else if (!validerTelefon(telefonnr)){
+        document.getElementById("telefonnrError").innerHTML = "Må skrive et gyldig norsk telefonnr";
         validTicket = false;
     } else {
         document.getElementById("telefonnrError").innerHTML = "";
@@ -53,15 +63,11 @@ function kjop() {
         document.getElementById("epostError").innerHTML = "Må skrive noe inn i epost";
         validTicket = false;
     }
-    let epostValid = false;
-    for (let i = 0; i < epost.length; i++) {
-        if (epost[i] === "@") {
-            epostValid = true;
-        }
-    }
-    if (!epostValid) {
-        document.getElementById("epostError").innerHTML = "Må skrive en gyldig epost";
+
+    else if(!validerEpost(epost)){
+        document.getElementById("epostError").innerHTML = "Må skrive en gyldig e-post";
         validTicket = false;
+
     } else {
         document.getElementById("epostError").innerHTML = "";
     }
